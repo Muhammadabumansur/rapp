@@ -16,11 +16,21 @@ body
     @media (max-width: 450px)
         padding-top: 50px
         padding-bottom: 50px
+    .fixed &
+        padding-top: 10px
+        padding-bottom: 10px
+        height: 100vh
+        display: flex
+        flex-direction: column
+        justify-content: space-around
 
 .main-header
+    margin-top: 0
     margin-bottom: 100px
     @media (max-width: 450px)
         margin-bottom: 10px
+    .fixed &
+        margin-bottom: 0
 
 .main-header-text
     font-family: 'Source Sans Pro', sans-serif
@@ -37,10 +47,15 @@ body
     @media (max-width: 450px)
         width: 300px
         padding: 30px 10px
+    .fixed &
+        margin-bottom: 0
+        padding: 10.5vh 65px
 
 .checkbox-block
     margin-bottom: 60px
     text-align: left
+    .fixed &
+        margin-bottom: 9vh
 
 .submit-button
     height: 60px

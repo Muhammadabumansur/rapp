@@ -157,12 +157,28 @@ body {
     .center-block {
       padding-top: 50px;
       padding-bottom: 50px; } }
+  .fixed .center-block {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
 
 .main-header {
+  margin-top: 0;
   margin-bottom: 100px; }
   @media (max-width: 450px) {
     .main-header {
       margin-bottom: 10px; } }
+  .fixed .main-header {
+    margin-bottom: 0; }
 
 .main-header-text {
   font-family: 'Source Sans Pro', sans-serif;
@@ -181,10 +197,15 @@ body {
     .login-form {
       width: 300px;
       padding: 30px 10px; } }
+  .fixed .login-form {
+    margin-bottom: 0;
+    padding: 10.5vh 65px; }
 
 .checkbox-block {
   margin-bottom: 60px;
   text-align: left; }
+  .fixed .checkbox-block {
+    margin-bottom: 9vh; }
 
 .submit-button {
   height: 60px;
