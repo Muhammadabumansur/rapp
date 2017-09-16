@@ -1,9 +1,13 @@
 @import _config
 
 body
+    position: relative
     background-color: #fff
     background-image: url(../img/main-bg.jpg)
     background-size: 100%
+    &.frozen
+        height: 100vh
+        overflow: hidden
 
 .center-block
     position: absolute
@@ -87,5 +91,25 @@ body
         color: #777
         border-bottom-color: #999
 
+.warn-popup
+    position: fixed
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    background-color: #fff
+    padding: 20px 30px
+    width: 400px
+    border-radius: 3px
+    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.6)
+    @media (max-width: 450px)
+        width: 300px
+    &.hidden
+        display: none
+
+.warn-popup-text
+    font-family: 'Source Sans Pro', sans-serif
+    font-weight: 300
+    font-size: 20px
+    color: #333
 
 /* font-family: 'Source Sans Pro', sans-serif; */

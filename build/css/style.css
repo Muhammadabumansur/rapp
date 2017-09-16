@@ -140,9 +140,13 @@ input[type="checkbox"] {
   border: 0; }
 
 body {
+  position: relative;
   background-color: #fff;
   background-image: url(../img/main-bg.jpg);
   background-size: 100%; }
+  body.frozen {
+    height: 100vh;
+    overflow: hidden; }
 
 .center-block {
   position: absolute;
@@ -238,5 +242,29 @@ body {
   .password-repair-link:hover {
     color: #777;
     border-bottom-color: #999; }
+
+.warn-popup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px 30px;
+  width: 400px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.6); }
+  @media (max-width: 450px) {
+    .warn-popup {
+      width: 300px; } }
+  .warn-popup.hidden {
+    display: none; }
+
+.warn-popup-text {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: #333; }
 
 /* font-family: 'Source Sans Pro', sans-serif; */
