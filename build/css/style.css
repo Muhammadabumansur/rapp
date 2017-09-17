@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'geometriabold';
+  src: url("../fonts/geometriabold.woff2") format("woff2"), url("../fonts/geometriabold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'geometrialight';
+  src: url("../fonts/geometrialight.woff2") format("woff2"), url("../fonts/geometrialight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'effra_heavyregular';
+  src: url("../fonts/effra_std_he-webfont.woff2") format("woff2"), url("../fonts/effra_std_he-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -93,10 +111,12 @@ input[type="checkbox"] {
     opacity: 1; }
 
 .container {
-  max-width: 1200px;
+  max-width: 1364px;
   width: auto;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-left: 96px;
+  padding-right: 96px; }
 
 @media (max-width: 1240px) {
   .container {
@@ -114,8 +134,8 @@ input[type="checkbox"] {
   .container {
     max-width: 300px; } }
 
-.container-narrow {
-  max-width: 900px; }
+.container-wide {
+  max-width: 1820px; }
 
 @media (max-width: 940px) {
   .container-narrow {
@@ -211,10 +231,9 @@ body {
   .fixed .checkbox-block {
     margin-bottom: 9vh; }
 
-.submit-button {
+.button {
   height: 60px;
   line-height: 60px;
-  width: 100%;
   text-align: center;
   background-color: #ff6b00;
   border: none;
@@ -226,9 +245,12 @@ body {
   letter-spacing: 0.1em;
   -webkit-transition: background-color 0.4s;
   transition: background-color 0.4s; }
-  .submit-button:hover {
+  .button:hover {
     cursor: pointer;
     background-color: #ec6a0c; }
+
+.submit-button {
+  width: 100%; }
 
 .password-repair-link {
   font-family: 'Source Sans Pro', sans-serif;
@@ -252,6 +274,7 @@ body {
   background-color: #fff;
   padding: 20px 30px;
   width: 400px;
+  text-align: center;
   border-radius: 3px;
   -webkit-box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.6);
           box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.6); }
@@ -264,7 +287,174 @@ body {
 .warn-popup-text {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 22px;
   color: #333; }
 
+.close-popup {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  background-color: #ff6b00;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s; }
+  .close-popup:hover {
+    cursor: pointer;
+    background-color: #ec6a0c; }
+
+.header {
+  padding-top: 45px;
+  padding-bottom: 45px; }
+
+.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .header-container .main-header {
+    margin-bottom: 0; }
+
+.enter-link {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 68px;
+  padding-right: 53px;
+  background-color: #fff;
+  background-image: url(../img/login.png);
+  background-repeat: no-repeat;
+  background-position: 40px center;
+  font-family: 'geometriabold', sans-serif;
+  font-size: 12px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-box-shadow: 0 3px 17px -10px black;
+          box-shadow: 0 3px 17px -10px black;
+  outline: 0 solid #fff;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s; }
+  .enter-link:hover {
+    -webkit-box-shadow: 0 3px 20px -7px black;
+            box-shadow: 0 3px 20px -7px black; }
+
+.internet-promo {
+  padding-top: 235px;
+  padding-bottom: 35px; }
+
+.internet-promo__header {
+  margin-top: 0;
+  margin-bottom: 70px; }
+  .internet-promo__header span {
+    display: inline-block;
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 39px;
+    color: #333;
+    margin-bottom: 5px; }
+    .internet-promo__header span:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 105%;
+      left: calc(100% + 37px);
+      bottom: 17px;
+      height: 1px;
+      width: 124px;
+      background-color: #222325; }
+  .internet-promo__header strong {
+    display: block;
+    font-family: 'geometriabold', sans-serif;
+    font-size: 70px;
+    line-height: 1;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.03em; }
+
+.internet-promo__list {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 110px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  .internet-promo__list > li {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #333; }
+
+.internet-promo-button {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 160px; }
+
+.pointer {
+  width: 79px;
+  height: 79px;
+  background-image: url(../img/pointer.png);
+  margin-left: auto;
+  margin-right: auto; }
+
+.cross-channel {
+  background-color: #ff6b00; }
+
+.cross-channel-container {
+  background-color: #e86404;
+  background-image: url(../img/polygon.png);
+  background-repeat: no-repeat;
+  background-position: center bottom -98px;
+  position: relative;
+  padding-top: 180px;
+  padding-bottom: 130px; }
+  .cross-channel-container:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 21px;
+    top: -20px;
+    left: 0;
+    background-color: #e86404; }
+
+.cross-channel__header {
+  margin-top: 0;
+  margin-bottom: 80px;
+  width: 50%; }
+  .cross-channel__header span {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 1.3;
+    color: #fff; }
+  .cross-channel__header strong {
+    font-family: 'effra_heavyregular', sans-serif;
+    font-size: 36px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em; }
+
 /* font-family: 'Source Sans Pro', sans-serif; */
+/* font-family: 'geometriabold', sans-serif; */
+/* font-family: 'effra_heavyregular', sans-serif; */

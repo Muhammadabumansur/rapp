@@ -1,5 +1,6 @@
 var loginForm = document.forms.loginForm;
 var warnPopup = document.querySelector('.warn-popup');
+var closePopupBtn = document.querySelector('..close-popup');
 var body = document.body;
 var topDocumentScroll;
 
@@ -20,6 +21,7 @@ var showWarnMessage = function() {
     body.classList.add('frozen');
     body.querySelector('.center-block').style.marginTop = -topDocumentScroll + 'px';
     document.addEventListener('click', hideWarnMessage)
+    closePopupBtn.addEventListener('click', hideWarnMessage)
 }
 
 loginForm.addEventListener('submit', function(e) {
