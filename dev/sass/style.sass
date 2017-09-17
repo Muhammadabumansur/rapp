@@ -244,6 +244,34 @@ body
         left: 0
         background-color: #e86404
 
+.cross-channel__list
+    width: 55%
+    list-style: none
+    padding: 0
+    margin: 0
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: -70px
+    & > li
+        width: 50%
+        padding-right: 5%
+        margin-bottom: 70px
+        display: flex
+        align-items: flex-start
+        font-family: 'Source Sans Pro', sans-serif
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.25
+        color: #fff
+        & > img
+            margin-right: 25px
+            padding-top: 3px
+    
+.ipad-img
+    position: absolute
+    right: -80px
+    bottom: -360px
+
 .cross-channel__header
     margin-top: 0
     margin-bottom: 80px
@@ -263,8 +291,173 @@ body
         text-transform: uppercase
         letter-spacing: 0.05em
 
+.brands
+    position: relative
+    background-color: #222325
+    padding-top: 130px
+    padding-bottom: 160px
 
+.brands__header
+    margin-top: 0
+    margin-bottom: 55px
+    text-align: center
+    color: #fff
+    font-family: 'Source Sans Pro', sans-serif
+    font-weight: 300
+    font-size: 32px
+    & span
+        font-weight: 900
 
+.brands__list
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+    flex-wrap: wrap
+    & > li
+        position: relative
+        width: (100% / 6)
+        height: 105px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-left: 1px solid #39393b
+        border-bottom: 1px solid #39393b
+        &:before
+            content: ''
+            position: absolute
+            display: block
+            background-color: #cccdcd
+            width: 3px
+            height: 3px
+            left: -2px
+            top: -2px
+            box-shadow: 0 0 0 5px #222325
+        &:nth-child(6n)
+            border-right: 1px solid #39393b
+            &:after
+                content: ''
+                position: absolute
+                display: block
+                background-color: #cccdcd
+                width: 3px
+                height: 3px
+                right: -2px
+                top: -2px
+                box-shadow: 0 0 0 5px #222325
+        &:nth-last-child(-n+6)
+            border-bottom: none
+
+.footer__menu
+    padding-top: 55px
+    padding-bottom: 75px
+    background-color: #fff
+    border-bottom: 1px solid #222325
+
+.footer__menu-categories
+    margin: 0
+    padding: 0
+    display: flex
+    justify-content: space-between
+    list-style: none
+    & > li
+        width: 17%
+    & a
+        color: #808080
+        text-decoration: none
+        transition: color 0.3s
+        &:hover
+            color: #ff6b00
+    & h3
+        display: inline-block
+        margin-top: 0
+        margin-bottom: 30px
+        font-family: 'Source Sans Pro', sans-serif
+        font-weight: 600
+        color: #333
+        text-transform: uppercase
+        border-bottom: 1px solid transparent
+        transition: border-color 0.3s
+        &:hover
+            border-color: #000
+
+.footer__submenu
+    margin: 0
+    padding: 0
+    list-style: none
+    & > li
+        margin-bottom: 8px
+    & > li > a
+        font-family: 'Source Sans Pro', sans-serif
+        font-weight: 300
+        color: #808080
+        font-size: 16px
+        line-height: 1.2
+
+.footer__sub-info
+    padding-top: 30px
+    padding-bottom: 30px
+
+.footer__sub-info-container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.footer__contacts
+    font-family: 'Source Sans Pro', sans-serif
+    font-weight: 300
+    font-size: 14px
+    text-transform: uppercase
+    & a
+        color: #333
+        text-decoration: none
+        transition: color 0.3s
+        &:hover
+            color: #ff6b00
+        &:not(:last-child)
+            margin-right: 20px
+
+.footer__legal-info
+    font-family: 'Source Sans Pro', sans-serif
+    font-weight: 300
+    font-size: 16px
+    & a
+        color: #333
+        text-decoration: none
+        transition: color 0.3s
+        &:hover
+            color: #ff6b00
+        &:not(:last-child)
+            margin-right: 20px
+
+.footer__bottom-block
+    height: 50px
+    background-color: #222325
+
+.footer__bottom-block-container
+    height: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.copyright
+    font-family: 'Source Sans Pro', sans-serif
+    font-weight: 600
+    color: #fff
+    font-size: 12px
+    text-transform: uppercase
+    letter-spacing: 0.2em
+
+.social
+    margin: 0
+    padding: 0
+    list-style: none
+    display: flex
+    & > li > a
+        display: flex
+        align-items: center
+    & > li:not(:last-child)
+        margin-right: 20px
 
 /* font-family: 'Source Sans Pro', sans-serif; */
 /* font-family: 'geometriabold', sans-serif; */
