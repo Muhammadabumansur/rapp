@@ -91,9 +91,15 @@ input[type="checkbox"]
     padding-left: 96px
     padding-right: 96px
 
+@media (max-width: 1380px)
+    .container
+        max-width: 1200px
+
 @media (max-width: 1240px)
     .container
         max-width: 900px
+        padding-left: 30px
+        padding-right: 30px
 
 @media (max-width: 940px)
     .container
@@ -110,18 +116,6 @@ input[type="checkbox"]
 .container-wide
     max-width: 1820px
 
-@media (max-width: 940px)
-    .container-narrow
-        max-width: 750px
-
-@media (max-width: 790px)
-    .container-narrow
-        max-width: 450px
-    
-@media (max-width: 490px)
-    .container-narrow
-        max-width: 300px
-       
 .visually-hidden
 	position: absolute
 	overflow: hidden
