@@ -1,6 +1,6 @@
 var loginForm = document.forms.loginForm;
 var warnPopup = document.querySelector('.warn-popup');
-var closePopupBtn = document.querySelector('..close-popup');
+var closePopupBtn = document.querySelector('.close-popup');
 var body = document.body;
 var topDocumentScroll;
 
@@ -37,7 +37,6 @@ loginForm.addEventListener('submit', function(e) {
         } else {
             e.preventDefault();
             showWarnMessage();
-            // alert('Пользователя с таким логином не существует');
             if (saveData) {
                 Cookies.set(name, pass);
             }
